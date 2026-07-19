@@ -104,6 +104,24 @@
     text-wrap: balance;
   }
 
+  .category {
+    margin-bottom: 36px;
+  }
+  .category:last-child {
+    margin-bottom: 0;
+  }
+
+  .category-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -161,18 +179,6 @@
     margin: 0;
   }
 
-  .tag {
-    align-self: flex-start;
-    font-size: 10.5px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--structural);
-    background: color-mix(in srgb, var(--structural) 12%, transparent);
-    padding: 3px 8px;
-    border-radius: 999px;
-  }
-
   footer {
     margin-top: 40px;
     font-size: 12.5px;
@@ -190,50 +196,54 @@
     <h1 class="wordmark">Painel de Gestão</h1>
   </header>
 
-  <div class="grid">
+  <div class="category">
+    <h2 class="category-title">Locação</h2>
+    <div class="grid">
+      <a class="card" href="https://inquilinos.angelicastudios.com.br" target="_blank" rel="noopener">
+        <p class="card-name">Inquilinos</p>
+        <p class="card-desc">Cadastro de apartamentos, agenda e assinatura digital de contratos.</p>
+      </a>
 
-    <a class="card" href="https://inquilinos.angelicastudios.com.br" target="_blank" rel="noopener">
-      <span class="tag">Locação</span>
-      <p class="card-name">Inquilinos</p>
-      <p class="card-desc">Cadastro de apartamentos, agenda e assinatura digital de contratos.</p>
-    </a>
+      <a class="card" href="https://inquilinos.angelicastudios.com.br/gestao_contratos.html" target="_blank" rel="noopener">
+        <p class="card-name">Contratos</p>
+        <p class="card-desc">Gerar, listar e baixar contratos em PDF por apartamento.</p>
+      </a>
+    </div>
+  </div>
 
-    <a class="card" href="https://inquilinos.angelicastudios.com.br/gestao_contratos.html" target="_blank" rel="noopener">
-      <span class="tag">Locação</span>
-      <p class="card-name">Contratos</p>
-      <p class="card-desc">Gerar, listar e baixar contratos em PDF por apartamento.</p>
-    </a>
+  <div class="category">
+    <h2 class="category-title">Financeiro</h2>
+    <div class="grid">
+      <a class="card" href="https://inquilinos.angelicastudios.com.br/pagamentos.html" target="_blank" rel="noopener">
+        <p class="card-name">Recebimentos</p>
+        <p class="card-desc">Quem pagou, vencimentos e atrasos, por mês ou ano — enviado por WhatsApp toda manhã às 08:00.</p>
+      </a>
 
-    <a class="card" href="https://inquilinos.angelicastudios.com.br/pagamentos.html" target="_blank" rel="noopener">
-      <span class="tag">Financeiro</span>
-      <p class="card-name">Recebimentos</p>
-      <p class="card-desc">Quem pagou, vencimentos e atrasos, por mês ou ano — enviado por WhatsApp toda manhã às 08:00.</p>
-    </a>
+      <a class="card" href="https://inquilinos.angelicastudios.com.br/comparativo.html" target="_blank" rel="noopener">
+        <p class="card-name">Comparativo Anual</p>
+        <p class="card-desc">2024 x 2025 x 2026 por unidade, mês a mês, com previsão pros meses ainda não fechados.</p>
+      </a>
+    </div>
+  </div>
 
-    <a class="card" href="https://inquilinos.angelicastudios.com.br/comparativo.html" target="_blank" rel="noopener">
-      <span class="tag">Financeiro</span>
-      <p class="card-name">Comparativo Anual</p>
-      <p class="card-desc">2024 x 2025 x 2026 por unidade, mês a mês, com previsão pros meses ainda não fechados.</p>
-    </a>
+  <div class="category">
+    <h2 class="category-title">Operação</h2>
+    <div class="grid">
+      <a class="card" href="https://lavanderia.angelicastudios.com.br" target="_blank" rel="noopener">
+        <p class="card-name">Lavanderia</p>
+        <p class="card-desc">Status das máquinas, sessões ativas e histórico de uso.</p>
+      </a>
 
-    <a class="card" href="https://lavanderia.angelicastudios.com.br" target="_blank" rel="noopener">
-      <span class="tag">Operação</span>
-      <p class="card-name">Lavanderia</p>
-      <p class="card-desc">Status das máquinas, sessões ativas e histórico de uso.</p>
-    </a>
+      <a class="card" href="https://angelicastudios.github.io/manutencao-angelica/gestor-mobile.html" target="_blank" rel="noopener">
+        <p class="card-name">Manutenção · Gestor</p>
+        <p class="card-desc">Todas as tarefas, equipe, arquivo e a agenda de limpeza semanal.</p>
+      </a>
 
-    <a class="card" href="https://angelicastudios.github.io/manutencao-angelica/gestor-mobile.html" target="_blank" rel="noopener">
-      <span class="tag">Operação</span>
-      <p class="card-name">Manutenção · Gestor</p>
-      <p class="card-desc">Todas as tarefas, equipe, arquivo e a agenda de limpeza semanal.</p>
-    </a>
-
-    <a class="card" href="https://angelicastudios.github.io/manutencao-angelica/equipe-mobile.html" target="_blank" rel="noopener">
-      <span class="tag">Operação</span>
-      <p class="card-name">Manutenção · Equipe</p>
-      <p class="card-desc">Tela do funcionário: entra pelo nome e vê só as próprias tarefas.</p>
-    </a>
-
+      <a class="card" href="https://angelicastudios.github.io/manutencao-angelica/equipe-mobile.html" target="_blank" rel="noopener">
+        <p class="card-name">Manutenção · Equipe</p>
+        <p class="card-desc">Tela do funcionário: entra pelo nome e vê só as próprias tarefas.</p>
+      </a>
+    </div>
   </div>
 
   <footer>Apareceu um sistema novo? É só me chamar que eu adiciono um atalho aqui.</footer>
